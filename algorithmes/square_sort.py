@@ -23,7 +23,10 @@ def choice_sort(a):
     :param a: массив
     :return: сортированный массив
     """
-    pass
+    for pos in range(0, len(a) - 1):
+        for k in range(pos + 1, len(a)):
+            if a[k] < a[pos]:
+                a[k], a[pos] = a[pos], a[k]
 
 
 # пузырьковая сортировка (bubble sort)
@@ -36,7 +39,10 @@ def bubble_sort(a):
     :param a: массив
     :return: сортированный массив
     """
-    pass
+    for bypass in range(1, len(a)):
+        for k in range(0, len(a) - bypass):
+            if a[k] > a[k + 1]:
+                a[k], a[k + 1] = a[k + 1], a[k]
 
 
 def test_sort(sorting_algorithm):
